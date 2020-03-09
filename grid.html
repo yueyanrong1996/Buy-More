@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buymore~Product Grid</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<style type="text/css">
+	/* @media (min-width:767px){
+		.my_header{height: 448px !important;}
+	}
+	    @media (max-width:991.99px) {
+		.my_header{height: 20rem;}
+		.my_footer{height: 32rem;margin-top: 20px;}
+	}
+	@media (min-width:992px) {
+		.my_header{height: 25rem;}
+		.my_footer{height: 60rem;margin-top: 20px;}
+	} */
+    .my_header,.my_footer{
+		width: 100%;border: 0;
+	}
+	@media (max-width:575.99px) {
+		.my_header{height: 28rem;}
+		.my_footer{height: 164rem;}
+	}
+	@media (min-width:576px) {
+		.my_header{height: 28rem;}
+		.my_footer{height: 164rem;}
+	}
+	@media (min-width:768px) {
+		.my_header{height: 28rem;}
+		.my_footer{height: 95rem;}
+	}
+	@media (min-width:992px) {
+		.my_header{height: 25.5rem;}
+		.my_footer{height: 58rem;}
+	}
+	@media (min-width:1200px) {
+		.my_header{height: 26.5rem;}
+		.my_footer{height: 58rem;}
+	}
+	/* @media (min-width:768px) {
+		.container{
+			margin-left: 5px;
+		}
+	
+	@media (min-width:992px) {
+		.container{
+			margin-left: 98px;
+		}
+	}
+	} */
+	
+    	#left h3{
+				margin-left: 21px;
+				line-height: 50px;
+			}
+    	.color_pink{color: #ea2c58;}
+			.fontgray{color: #999999;}
+			#top li+li{margin: auto 5px ;}
+			.font13{font-size: 13px;}
+			.font14{font-size: 14px;}
+			.font15{font-size: 15px;}
+			.font16{font-size: 16px;}
+			.font22{font-size: 22px;}
+			.h50{height: 50px;}
+			
+			.lh50{line-height: 50px;}
+			#left>div:first-child li img{
+				width: 1.875rem;
+				height: 1.875rem;
+				justify-content: start;
+			}
+			.slh::before{
+				font-size: 1.25rem;
+				content: "···";
+				color:#ea2c58;
+				margin-right: 10px;
+			}
+			.dy::after{
+				font-size: 0.25rem;
+				content: "＞";
+				color:#242424;
+				float: right;
+			}
+			.btn-pink {
+			  color: #999999;
+			  background-color: #f8f9fa;
+			  border-color: #f8f9fa;
+			}
+			.btn-pink:hover {
+			  color: #999999;
+			  background-color: #ea2c58;
+			  border-color: #ea2c58;
+			}
+			.color444{color: #444444;}
+			.color333{color: #333333;}
+			.color999{color: #999999;}
+			#left>div:nth-child(3) li img{
+				width: 1.5625rem;
+				height: 1.5625rem;
+				float: right;
+				margin-top: 10px;
+			}
+			#left>div:nth-child(3):hover{
+				cursor: pointer;
+			}
+			.h124{height: 124px;}
+			#left>div:nth-child(4) li img{
+				width: 4.375rem;
+				height: 4.475rem;
+				margin-top: 25px;
+				margin-right: 10px;
+			}
+			#left>div:nth-child(4) li img:hover{
+				cursor: pointer;
+			}
+			.w100h-73{
+				width: 6.25rem;
+				display: flex;
+				flex-wrap:wrap;
+				flex-direction: column;
+				margin-top: 16px;
+			}
+			.h-17{
+				height: 17px;
+			}
+			.h24{
+				height: 1.5rem;
+				line-height: 1.5rem;
+			}
+			#left>div:nth-child(4) li p {
+			    color: #333;
+    			font-family: inherit;
+    			font-size: 12px;
+    			font-style: normal;
+   				font-weight: 500;
+    			margin-top: 8px;
+    			text-transform: uppercase;
+			}
+			#left>div:nth-child(4) li small {
+				display: block;
+			    color: #ea2c58;
+			    font-size: 14px;
+			}
+			.backimg{
+				background: url(./images/g-man.jpg);
+				width: 100%;
+				height: 300px; 
+				position: relative;
+			}
+			.backimg div{
+				position: absolute;
+			    bottom: 0;
+			    text-align: center;
+			    left: 20px;
+			    right: 20px;
+			    background-color: #ea2c58;
+			    color: #fff;
+			    font-weight: 500;
+			    letter-spacing: 0.3px;
+			    font-size: 16px;
+			    padding: 15px 0;
+			    text-transform: uppercase;
+			}
+			.top48{
+				position: relative;
+				top: 48px;
+				left: 15px;
+			}
+			/* .p-auto{
+				position: relative;
+				left: 92px;
+			} */
+			@media (min-width:992px) {
+						.img-lg-auto{
+						position: relative;
+						top: 0px;
+						left: 0px;
+					}
+					.h143-lg{
+						height: 100%;
+						line-height: 850%;
+					}
+				}
+				@media (max-width:991.99px) {
+						.img-sm-auto{
+						position: relative;
+						top: -39px;
+						left: -32px;
+						width: 104.9% !important;
+					}
+					.h143-sm{
+						height: 100%;
+						line-height: 1600%;
+					}
+					.p-sm-14{
+						position: relative;
+						left: -14px;
+					}
+					.p-sm-35{
+						position: relative;
+						left: -35px;
+					}
+				}
+				.subcategory-img {
+				    position: relative;
+				    cursor: pointer;
+				    margin-bottom: 30px;
+						vertical-align: middle;
+						text-align: center;
+						background-color: #FFFFFF;
+						border: 1px solid #FFFFFF;
+				}
+				.img-responsive{
+				    display: block;
+				    max-width: 100%;
+				    height: auto;
+				}
+			.subcategory-overlay {
+				    position: absolute;
+				    text-align: center;
+				    width: 100%;
+				    min-width: 120px;
+				    height: 100%;
+				    top: 0;
+				    background-color: rgba(0, 0, 0, 0.5);
+				    color: #f0f0f0;
+				    font-size: 16px;
+				    font-weight: 400;
+				    text-transform: uppercase;
+				}
+			.btn-pink-1:hover {
+				color: #3b3b3b;
+				background-color: #d3d5d8;
+				border-color: #d3d5d8;
+			}
+			.btn-pink-1 {
+			  	color: #fff;
+			  	background-color: #ea2c58;
+			  	border-color: #ea2c58;
+				font-weight: 500;
+				width: 127.77px;
+				height: 36px;
+				text-align: center;
+				border-radius: 0 !important;
+				box-shadow: 0px 1px 1px 1px #333;
+			}
+			#rightimg img{
+				width: 100%;
+			}
+			#rightimg span{
+				float: right;
+				margin-right: 10px;
+				color: red;
+			}
+			#rightimg p{
+				margin-top: 8px;
+				font-size: 12px;
+				color: #333;
+			}
+			#rightimg>div{
+				position: relative;
+			}
+			#rightimg div b{
+				background: yellow;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				position: absolute;
+				text-align: center;
+				line-height: 40px;
+				color: #fff;
+				top: 10px;
+				right:30px;
+			}
+			#hot{
+				position: absolute;
+				top: 10px;
+				left: 30px;
+				width: 50px;
+				height: 30px;
+				border: 2px solid red;
+				text-align: center;
+				color: red;
+				font-size: 14px;
+			}
+		.page-item .page-link:hover{
+    		background-color: #f99 !important;   	
+    	}
+    	.pagination .page-item+.page-item{
+    		margin-left: .5rem;
+    	}
+    </style>
+</head>
+<body>
+	<header>
+		<iframe class="my_header" src="header.html" scrolling="no"></iframe>
+	</header>
+<div class="container row no-gutters mx-auto">
+	<!-- 顶部区域 -->
+		<div class=" col-12">
+			<div id="top" class="col-12 page-label bg-light d-flex justify-content-between align-items-center fontgray h50">
+				<h3 class="pull-left color_pink ml-3 font16">PRODUCT GRID</h3>
+				<ul class="list-unstyled pull-right font-italic d-flex font13 my-auto mr-3">
+					<li>Home</li>
+					<li> >> </li>
+					<li class="color_pink">Product Grid</li>
+				</ul>
+			</div>
+		</div>
+		<div class="p-auto no-gutters col-lg-3">
+			<!-- 左边 -->
+		<div id="left" class="row no-gutters mr-2 mt-5 col-lg-12">
+			<!-- 1 -->
+			<div class="col-lg-12 col-sm-12 mb-3 border">
+				<div class="h50 bg-light align-items-center border-bottom">
+					<h3 class="font15 panel-title font-weight-bold slh">CATEGORY</h3>
+				</div>
+				<ul class="list-unstyled px-3 my-2 lh50">
+					<li class="font13 h50 justify-content-start border-bottom dy">
+						<img src="./images/l1.png" class="mr-2 my-2">
+						Premium Store
+					</li>
+					<li class="font13 h50 justify-content-start border-bottom dy">
+						<img src="./images/l2.png" class="mr-2 my-2">
+						Premium Store
+					</li>
+					<li class="font13 h50 justify-content-start border-bottom dy">
+						<img src="./images/l3.png" class="mr-2 my-2">
+						Premium Store
+					</li>
+					<li class="font13 h50 justify-content-start border-bottom dy">
+						<img src="./images/l4.png" class="mr-2 my-2">
+						Premium Store
+					</li>
+					<li class="font13 h50 justify-content-start dy">
+						<img src="./images/l5.png" class="mr-2 my-2">
+						Premium Store
+					</li>
+				</ul>
+			</div>
+			<!-- 2 -->
+			<div class="col-lg-12 col-sm-12 mb-3 border">
+				<div class="h50 bg-light align-items-center border-bottom">
+					<h3 class="font15 panel-title font-weight-bold slh">SIZE</h3>
+				</div>
+				<ul class="list-unstyled px-3 my-2 lh50">
+					<li class="btn border btn-pink btn-danger active">XS</li>
+					<li class="btn border btn-pink">SM</li>
+					<li class="btn border btn-pink">MD</li>
+					<li class="btn border btn-pink">LG</li>
+					<li class="btn border btn-pink">XL</li>
+				</ul>
+			</div>
+			<!-- 3 -->
+			<div class="col-lg-12 col-sm-12 mb-3 border">
+				<div class="h50 bg-light align-items-center border-bottom">
+					<h3 class="font15 panel-title font-weight-bold slh">MANUFACTUES</h3>
+				</div>
+				<ul class="list-unstyled px-3 my-2 lh50">
+					<li class="font13 h50 justify-content-start border-bottom color444">
+						GUCCI
+						<img src="./images/n1.png" class="">
+					</li>
+					<li class="font13 h50 justify-content-start border-bottom color444">
+						ASOS
+						<img src="./images/n2.png" class="">
+					</li>
+					<li class="font13 h50 justify-content-start border-bottom color444">
+						BLUBERY
+						<img src="./images/n3.png" class="">
+					</li>
+					<li class="font13 h50 justify-content-start border-bottom color444">
+						H&M
+						<img src="./images/n4.png" class="">
+					</li>
+					<li class="font13 h50 justify-content-start color444">
+						TESCO
+						<img src="./images/n5.png" class="">
+					</li>
+				</ul>
+			</div>
+			<!-- 4 -->
+			<div class="col-lg-12 col-sm-12 mb-3 border">
+				<div class="h50 bg-light align-items-center border-bottom">
+					<h3 class="font15 panel-title font-weight-bold slh">ON SALE</h3>
+				</div>
+				<ul class="list-unstyled px-3 my-2 lh50">
+					<li class="font13 h124 d-flex justify-content-start border-bottom color444">
+						<div><img src="./images/footer2.jpg" alt=""></div>
+						<div class="w100h-73">
+							<p class="h-17">SCALET-SHIRT</p>
+							<small class="h-17">$22.50</small>
+						</div>
+					</li>
+					<li class="font13 h124 d-flex justify-content-start border-bottom color444">
+						<div><img src="./images/footer3.jpg" alt=""></div>
+						<div class="w100h-73">
+							<p class="h-17">SCALET-SHIRT</p>
+							<small class="h-17">$35.75</small>
+						</div>
+					</li>
+					<li class="font13 h124 d-flex justify-content-start border-bottom color444">
+						<div><img src="./images/footer4.jpg" alt=""></div>
+						<div class="w100h-73">
+							<p class="h-17">SCALET-SHIRT</p>
+							<small class="h-17">$75.50</small>
+						</div>
+					</li>
+					<li class="font13 h124 d-flex justify-content-start color444">
+						<div><img src="./images/footer.jpg" alt=""></div>
+						<div class="w100h-73">
+							<p class="h-17">SCALET-SHIRT</p>
+							<small class="h-17">$85.50</small>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 5.DISCOUNT OFFER -->
+			<div class="col-lg-12 d-lg-block d-sm-none mb-3 border">
+				<div class="h50 bg-light align-items-center border-bottom">
+					<h3 class="font15 panel-title font-weight-bold slh">DISCOUNT OFFER</h3>
+				</div>
+				<div class="backimg">
+					<div class="color_pink">50% Off Shirts</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-9 top48" id="right" >
+			<!-- 右边部分 -->
+		<div class="col-lg-12 col-sm-12 row no-gutters">
+			<div class="col-12">
+				<img src="images/banner2.jpg" class="w-100 img-sm-auto mb-4">
+			</div>
+		</div>
+		<!-- 2.商品 -->
+		<div class="row no-gutters p-sm-14">
+			<div class="col-lg-12 col-sm-12">
+				<h3 class="ml-lg-2 d-flex justify-content-between font22 px-lg-3 h24 mb-3">Women
+					<small class="font15">There Are 120 Products</small>
+				</h3>
+				<h4 class="font14 h15 ml-lg-2 px-lg-3 font-weight-normal color333 mb-3">SUBCATEGRIES</h4>
+				<div class="row nulltable no-gutters">
+					<div class="row no-gutters pl-lg-3">
+						<div id="img_subcategries" class="row no-gutters col-lg-2 col-sm-4">
+							<div class="subcategory-img">
+								<img src="images/women1.jpg" class="img-responsive" >
+								<div class="subcategory-overlay h143-lg h143-sm">
+									Tops
+								</div>
+							</div>
+							</div>
+							<div id="img_subcategries" class="row no-gutters col-lg-2 col-sm-4">
+								<div class="subcategory-img">
+									<img src="images/women3.jpg" class="img-responsive" >
+									<div class="subcategory-overlay h143-lg h143-sm">
+										JEANS
+									</div>
+								</div>
+								</div>
+								<div id="img_subcategries" class="row no-gutters col-lg-2 col-sm-4">
+									<div class="subcategory-img">
+										<img src="images/women4.jpg" class="img-responsive" >
+										<div class="subcategory-overlay h143-lg h143-sm">
+											JEANS
+										</div>
+									</div>
+								</div>
+								<div id="img_subcategries" class="row no-gutters col-lg-2 col-sm-4">
+									<div class="subcategory-img">
+										<img src="images/women2.jpg" class="img-responsive" >
+										<div class="subcategory-overlay h143-lg h143-sm">
+										MERARIALS
+										</div>
+									</div>
+								</div>
+								<div id="img_subcategries" class="row no-gutters col-lg-2 col-sm-4">
+									<div class="subcategory-img">
+										<img src="images/women3.jpg" class="img-responsive" >
+										<div class="subcategory-overlay h143-lg h143-sm">
+										FLATS
+										</div>
+									</div>
+								</div>
+								<div id="img_subcategries" class="row no-gutters col-lg-2 col-sm-4">
+									<div class="subcategory-img">
+										<img src="images/women2.jpg" class="img-responsive" >
+										<div class="subcategory-overlay h143-lg h143-sm">
+											DRESSES
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+		</div>
+		<div class="col-lg-12 col-sm-12 ml-2 px-3 p-sm-35 pb-3">
+				<strong class="font14 color999 d-flex justify-content-between font-weight-normal mb-3 pb-3">
+					Showing 1-10 of 120 Products
+					<div id="">
+						<a href="">
+						<img src="images/list_1.png" >
+					</a>
+					<a href="">
+						<img src="images/list_2.png" >
+					</a>
+					</div>
+				</strong>
+				<div class="d-flex justify-content-between mb-3 pb-3">
+					<a href="#" class="btn btn-pink-1">COMPARE</a>
+					<a href="#" class="btn btn-pink-1">SEE ALL</a>
+				</div>
+			</div>
+		<div class="row">
+			<div id="rightimg" class="row ml-lg-4">
+				<div class="col-md-4 col-sm-6 col-xs-12 ">
+					<img src="images/women1.jpg">
+					<strong>Bright Scalet-Shirt  <span>$65</span></strong>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <b>20%</b>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<img src="images/women2.jpg">
+					<strong>Bright Scalet-Shirt  <span>$65</span></strong>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <div id="hot">HOT</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<img src="images/women3.jpg">
+					<strong>Bright Scalet-Shirt  <span>$65</span></strong>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <div id="hot">NEW</div>
+				</div>
+			</div>
+		</div>
+		<div id="rightimg" class="row ml-lg-4">
+				<div class="col-md-4 col-sm-6 col-xs-12 ">
+					<img src="images/women1.jpg">
+					<strong>Bright Scalet-Shirt  <span>$65</span></strong>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <b>20%</b>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<img src="images/women2.jpg">
+					<strong>Bright Scalet-Shirt  <span>$65</span></strong>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <div id="hot">HOT</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<img src="images/women3.jpg">
+					<strong>Bright Scalet-Shirt  <span>$65</span></strong>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <div id="hot">NEW</div>
+				</div>
+			</div>
+			<div id="rightimg" class="row ml-lg-4">
+				<div class="col-md-4 col-sm-6 col-xs-12 ">
+					<img src="images/women1.jpg">
+					<strong>Bright Scalet-Shirt  <span>$65</span></strong>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <b>20%</b>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<img src="images/women2.jpg">
+					<strong>Bright Scalet-Shirt  <span>$65</span></strong>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <div id="hot">HOT</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<img src="images/women3.jpg">
+					<strong>Bright Scalet-Shirt  <span>$65</span></strong>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <div id="hot">NEW</div>
+				</div>
+			</div>
+				<ul class="pagination bg-light ml-5 mb-5">
+		<li class="page-item">
+			<a class="page-link bg-transparent text-danger" href="#">Previous</a>
+		</li>
+		<li class="page-item">
+			<a class="page-link bg-transparent text-dark" href="#">1</a>
+		</li>
+		<li class="page-item">
+			<a class="page-link bg-transparent text-dark" href="#">2</a>
+		</li>
+		<li class="page-item">
+			<a class="page-link bg-transparent text-dark" href="#">3</a>
+		</li>
+		<li class="page-item">
+			<a class="page-link bg-transparent text-dark" href="#">4</a>
+		</li>
+		<li class="page-item">
+			<a class="page-link bg-transparent text-dark" href="#">5</a>
+		</li>
+		<li class="page-item">
+			<a class="page-link bg-transparent text-danger" href="#">Next</a>
+		</li>
+	</ul>
+		</div>
+		</div>
+
+</div>
+<footer>
+	<iframe class="my_footer" src="footer.html" scrolling="no"></iframe>
+</footer>
+</body>
+</html>	

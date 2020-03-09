@@ -1,0 +1,73 @@
+.my-black{background-color: #343a40;}
+/*第一部分*/
+.my-background-color{background-color: #ea2c58;}
+.my-color{color: #ea2c58;}
+.text-small{font-size: 0.8rem;}
+.btn-black{background-color: #424242;color: #fff;font-weight: bold;}
+.btn-black:hover,.btn-black:active{background-color: #ea2c58;}
+/*第二部分*/
+#my-float:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+a{text-decoration: none;vertical-align: middle;}
+.blog-a a:link,.blog-a a:visited{color: #aaa;}
+.blog-a a:hover,.blog-a a .active{color: #ea2c58;text-decoration: none;}
+
+.blog-a a span{color: #aaa;}
+.blog-a a span:hover,.blog-a a span .active{color: #ea2c58;text-decoration: none;}
+/*第三部分*/
+.bg-grey{background-color: #eee;}
+.navbar-light .navbar-nav .nav-link:hover,.navbar-light .navbar-nav .nav-link.active{color: #ea2c58;}
+/*第四部分*/
+.my-bg-img{
+	background-image: url(../images/header-title.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.my-bg-img .my-rgb{background-color: rgba(19, 17, 17, 0.5);height: 250px;position: relative;}
+/*第五部分*/
+@media (min-width: 992px){
+	.blog-r{
+		top: -20px; width: 90%;
+	}
+}
+.blog-a .breadcrumb-item+.breadcrumb-item::before{content: ">>";color: #aaa;font-size: 0.8rem;}
+/*第六部分*/
+.my_card{background-color: rgba(19, 17, 17, 0.5);left: 0;top:-67px;color: #fff;width: 20%;
+border-top: 3px solid #ea2c58;}
+
+.btn-hover:link,.btn-hover:visited{color: #aaa;}
+.btn-hover:hover,.btn-hover .active{color: #fff;background-color: #ea2c58;}
+
+.relative-top{margin-top: -50px;}
+/*第七部分*/
+.page-link{border-radius: 0.25rem;border-color:#aaa; background:transparent; }
+.page-link:hover{background-color: #ea2c58;color: #fff;}
+.page-item+.page-item{margin-left: 1rem;}
+
+.my_header{
+	width: 100%;
+	border:0;
+}
+.my_footer{
+	width: 100%;
+	border:0;
+}
+@media (max-width: 575px){
+	.my_footer{height:2712px;}
+	.my_header{height:521px;}
+}
+@media (min-width: 576px){
+	.my_footer{height:2712px;}
+	.my_header{height:497px;}
+}
+@media (min-width: 768px){
+	.my_header{height:473px;}
+	.my_footer{height: 1600px;}
+}
+@media (min-width: 992px){
+	.my_header{height:387px;}
+	.my_footer{height: 1012px;}
+}

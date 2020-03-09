@@ -1,0 +1,87 @@
+
+.text_small{font-size: 0.8rem}
+.text_middle{font-size: 1.2rem}
+.text_large{font-size: 2rem}
+a,span{color: #fff;}
+a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+.top-footer{
+			background: url(../images/fashion-girl.jpg);
+			background-size: 100%;
+		}
+@media (max-width: 991.99px){
+	.top-footer{
+		background-image: linear-gradient(to right, #000, #111);
+	}
+}
+.top-footer img{
+	width: 90px;
+    height: 91.75px;
+}
+.top-footer-title>h3{
+	color: #fff;
+	font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.desc{
+	height: 91.75px;
+	position: absolute;
+	left: 78px;
+}
+.desc>.detail{
+	color: #cccccc;
+	margin-top: 8px;
+	font-style: oblique;
+	letter-spacing: 0.5;
+	font-weight: 400;
+	font-size: 15px;
+	font-family: "Alegreya",serif;
+	position: absolute;
+	top: -10px;
+	left: 32px;
+}
+.desc>.date{
+	color:  #ea2c58;
+	font-size: 14px;
+	font-weight: 500;
+	height: 18px;
+	position: absolute;
+	top: 70px;
+	left: 32px;
+}
+.footer-img{
+	position: relative;
+	left: -15px;
+}
+.top-footer-title::before {
+	background-color: #ea2c58;
+	content: "";
+	width: 10px;
+	height: 4px;
+	position: absolute;
+	text-align: center;
+	top: 85px;
+}
+.btn-danger{
+	border-radius: 0 !important;
+	color: #fff;
+}
+.buy2{
+	color: #ea2c58;
+	font-size: 30px;
+}
+.buy2:hover{
+	text-decoration: none;
+	color: #ea2c58;
+}
+.bottom_footer_desc{color: #222} 
+.h50{height: 50px;}
+.cc1{
+	height: 300px;
+}
